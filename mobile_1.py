@@ -20,7 +20,9 @@ while i < len(mobile_data['data']):
     price_split = price.split()
     price_float = float(price_split[0])
     exchange_rate = mobile_data.get('exchnage_rate')
+    converted_amt = exchange_rate * price_float
+    converted_round = round(converted_amt, 2)
     made = mobile_data.get('data')[i].get('made')
-    sentence = f"{name} is made in {made}. The price is {price} which is equal to {exchange_rate * price_float} BDT "
+    sentence = f"{name} is made in {made}. The price is {price} which is equal to {converted_round} BDT "
     i = i + 1
     print(sentence)
