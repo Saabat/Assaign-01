@@ -42,12 +42,15 @@ for item in post_data:
     i = 0
     while i < len(post_data):
         data = post_data[i].get('title')
-        slug = data.strip().lower().replace(' ','-')
-        post_data[i].update({'slug': slug})
+        slug = data.strip().lower()
+        slug_split = slug.split()[ :3]
+        slugify = ' '.join(slug_split).replace(' ', '-')
+        post_data[i].update({'slug': slugify})
         i += 1
 
 
 # Your code ends here
-
-print(post_data[4])
-print(post_data[3])
+#
+# print(post_data[4])
+# print(post_data[3])
+# print(post_data[5])
