@@ -50,3 +50,4 @@ for item in post_data:
 # Your code ends here
 
 print(post_data[4])
+print(post_data[3])
